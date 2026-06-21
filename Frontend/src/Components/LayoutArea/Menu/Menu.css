@@ -1,0 +1,29 @@
+.Menu {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    backdrop-filter: blur(6px);
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #475569;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.menu-link:hover {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+.menu-link.active {
+    background: #1d4ed8;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(29, 78, 216, 0.28);
+}

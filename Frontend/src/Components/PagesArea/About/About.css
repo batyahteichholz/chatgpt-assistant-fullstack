@@ -1,0 +1,176 @@
+.About {
+    min-height: calc(100vh - 128px);
+    padding: 1.25rem;
+    display: flex;
+    justify-content: center;
+}
+
+.about-container {
+    max-width: 980px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 24px 50px rgba(15, 23, 42, 0.1);
+    overflow: hidden;
+}
+
+.about-header {
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.about-header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.about-header h2 {
+    margin: 0.3rem 0 0;
+    font-size: 1rem;
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+.about-content {
+    padding: 1.4rem;
+}
+
+.about-content section {
+    margin-bottom: 1.7rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.about-content section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.about-content h3 {
+    color: #1e3a8a;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.about-content p {
+    line-height: 1.7;
+    margin-bottom: 0.9rem;
+    color: #334155;
+}
+
+.about-content strong {
+    color: #0f172a;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.tech-item {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.tech-item strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #1d4ed8;
+}
+
+.tech-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tech-item li {
+    padding: 0.2rem 0;
+    color: #475569;
+}
+
+.tech-item li:before {
+    content: "▸ ";
+    color: #1d4ed8;
+    font-weight: bold;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    padding: 0.55rem 0;
+    color: #334155;
+}
+
+.developer-info p,
+.contact-info p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.contact-info a {
+    color: #1d4ed8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #1e40af;
+    text-decoration: underline;
+}
+
+.about-footer {
+    background: #f8fafc;
+    padding: 1rem 1.4rem;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* RTL Support for Hebrew text */
+.About p[lang="he"],
+.About h3[lang="he"] {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .About {
+        padding: 0.7rem;
+        min-height: calc(100vh - 116px);
+    }
+
+    .about-header h1 {
+        font-size: 1.35rem;
+    }
+
+    .about-header h2 {
+        font-size: 0.95rem;
+    }
+
+    .about-content {
+        padding: 1rem;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,21 @@
+.Header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(8px);
+    color: #f8fafc;
+    text-align: left;
+}
+
+.Header h1 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.Header p {
+    margin: 0.25rem 0 0;
+    color: #cbd5e1;
+    font-size: 0.85rem;
+}
