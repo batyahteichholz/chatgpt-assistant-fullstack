@@ -253,3 +253,10 @@ This project is created for educational purposes as part of a Full Stack Web Dev
 ---
 
 **Built with ❤️ using Python, React, and MySQL**
+
+
+## GitHub Repository
+
+https://github.com/batyahteichholz/chatgpt-assistant-fullstack
+
+
