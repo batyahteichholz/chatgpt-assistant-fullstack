@@ -16,6 +16,7 @@ register_exception_handlers(server)
 server.add_middleware(
     CORSMiddleware,
     allow_origins=[AppConfig.frontend_origin],
+    allow_origin_regex=r"https?://(localhost|127\.0\.0\.1)(:\d+)?$",
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],

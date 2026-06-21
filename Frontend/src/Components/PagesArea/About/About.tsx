@@ -1,5 +1,14 @@
 import "./About.css";
 
+const developerProfile = {
+    name: "Batyah Teichholz",
+    description: "Full Stack Developer specializing in Python and React",
+    project: "Full Stack Web Developer Project - Database | Python | REST API | React | GenAI",
+    githubUrl: "https://github.com/batyahteichholz",
+    githubLabel: "batyahteichholz",
+    email: "batyah.t@gmail.com"
+};
+
 export function About() {
     return (
         <div className="About">
@@ -66,20 +75,20 @@ export function About() {
                     <section className="developer-info">
                         <h3>👨‍💻 About the Developer</h3>
                         <p>
-                            <strong>Name:</strong> [Developer Name]
+                            <strong>Name:</strong> {developerProfile.name}
                         </p>
                         <p>
-                            <strong>Description:</strong> Full Stack Developer specializing in Python and React
+                            <strong>Description:</strong> {developerProfile.description}
                         </p>
                         <p>
-                            <strong>Project:</strong> Full Stack Web Developer Project - Database | Python | REST API | React | GenAI
+                            <strong>Project:</strong> {developerProfile.project}
                         </p>
                     </section>
 
                     <section className="contact-info">
                         <h3>📧 Contact</h3>
-                        <p>GitHub: <a href="https://github.com" target="_blank" rel="noopener noreferrer">[Profile Link]</a></p>
-                        <p>Email: [Email Address]</p>
+                        <p>GitHub: <a href={developerProfile.githubUrl} target="_blank" rel="noopener noreferrer">{developerProfile.githubLabel}</a></p>
+                        <p>Email: <a href={`mailto:${developerProfile.email}`}>{developerProfile.email}</a></p>
                     </section>
                 </div>
 
