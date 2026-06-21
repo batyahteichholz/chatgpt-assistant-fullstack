@@ -19,15 +19,20 @@ class ChatService {
                 message: response.data.message,
                 conversationId: response.data.conversation_id
             };
-        } catch (error: any) {
+        } catch (error: unknown) {
             console.error("Error sending message:", error);
-            const responseData = error?.response?.data;
+            const responseData = axios.isAxiosError(error) ? error.response?.data : undefined;
             const apiMessage =
-                responseData?.detail ||
-                responseData?.message ||
+                (typeof responseData === "object" && responseData !== null && "detail" in responseData
+                    ? String(responseData.detail)
+                    : "") ||
+                (typeof responseData === "object" && responseData !== null && "message" in responseData
+                    ? String(responseData.message)
+                    : "") ||
                 (typeof responseData === "string" ? responseData : "");
 
-            throw new Error(apiMessage || error?.message || "Failed to send message");
+            const fallbackMessage = error instanceof Error ? error.message : "Failed to send message";
+            throw new Error(apiMessage || fallbackMessage);
         }
     }
 

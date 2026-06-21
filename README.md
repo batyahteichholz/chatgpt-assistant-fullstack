@@ -222,7 +222,7 @@ Check API health status.
 
 ## 🔗 קישורים / Links
 
-- **GitHub Repository:** [הוסף קישור כאן / Add link here]
+- **GitHub Repository:** [chatgpt-assistant-fullstack](https://github.com/batyahteichholz/chatgpt-assistant-fullstack)
 - **OpenAI API:** https://platform.openai.com/
 - **FastAPI Documentation:** https://fastapi.tiangolo.com/
 - **React Documentation:** https://react.dev/
@@ -231,9 +231,9 @@ Check API health status.
 
 ## 👨‍💻 מפתח / Developer
 
-**Name:** [Your Name]  
-**Email:** [your.email@example.com]  
-**GitHub:** [github.com/yourusername]
+**Name:** Batyah Teichholz  
+**Email:** batyah.t@gmail.com  
+**GitHub:** https://github.com/batyahteichholz
 
 ---
 
@@ -253,10 +253,5 @@ This project is created for educational purposes as part of a Full Stack Web Dev
 ---
 
 **Built with ❤️ using Python, React, and MySQL**
-
-
-## GitHub Repository
-
-https://github.com/batyahteichholz/chatgpt-assistant-fullstack
 
 

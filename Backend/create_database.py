@@ -8,22 +8,27 @@ import os
 
 load_dotenv()
 
+mysql_host = os.getenv("MYSQL_HOST", "localhost")
+mysql_user = os.getenv("MYSQL_USER", "root")
+mysql_password = os.getenv("MYSQL_PASSWORD", "")
+mysql_database = os.getenv("MYSQL_DATABASE", "chatgpt_assistant")
+
 # Connect to MySQL server (without specifying database)
 try:
     connection = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="batyah2204"
+        host=mysql_host,
+        user=mysql_user,
+        password=mysql_password
     )
     
     cursor = connection.cursor()
     
     # Create database if it doesn't exist
-    cursor.execute("CREATE DATABASE IF NOT EXISTS chatgpt_assistant")
-    print("✅ Database 'chatgpt_assistant' created or already exists")
+    cursor.execute(f"CREATE DATABASE IF NOT EXISTS {mysql_database}")
+    print(f"✅ Database '{mysql_database}' created or already exists")
     
     # Use the database
-    cursor.execute("USE chatgpt_assistant")
+    cursor.execute(f"USE {mysql_database}")
     
     # Create conversations table
     cursor.execute("""
@@ -56,7 +61,7 @@ try:
     # Check tables
     cursor.execute("SHOW TABLES")
     tables = cursor.fetchall()
-    print(f"\n📊 Tables in chatgpt_assistant database:")
+    print(f"\n📊 Tables in {mysql_database} database:")
     for table in tables:
         print(f"   - {table[0]}")
     

@@ -35,8 +35,9 @@ export function ChatPage() {
             if (!conversationId) {
                 setConversationId(response.conversationId);
             }
-        } catch (error: any) {
-            notify.error(error.message || "Failed to get response from ChatGPT");
+        } catch (error: unknown) {
+            const message = error instanceof Error ? error.message : "Failed to get response from ChatGPT";
+            notify.error(message);
         } finally {
             setIsLoading(false);
         }
